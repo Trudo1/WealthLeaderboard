@@ -11,6 +11,24 @@
 		28B2541F2A4E910E00C9C914 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B2541E2A4E910E00C9C914 /* ContentView.swift */; };
 		28B254212A4E910F00C9C914 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28B254202A4E910F00C9C914 /* Assets.xcassets */; };
 		28B254242A4E910F00C9C914 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28B254232A4E910F00C9C914 /* Preview Assets.xcassets */; };
+		28D7E1B92A533B1200254B84 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D7E1B82A533B1200254B84 /* User.swift */; };
+		28D7E1BB2A533EB700254B84 /* WLButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D7E1BA2A533EB700254B84 /* WLButtonStyle.swift */; };
+		28D7E1BD2A533EF500254B84 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D7E1BC2A533EF500254B84 /* Fonts.swift */; };
+		28D7E1C02A533F2D00254B84 /* LabGrotesque-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 28D7E1BF2A533F2D00254B84 /* LabGrotesque-Medium.ttf */; };
+		28D7E1C32A53407700254B84 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D7E1C22A53407700254B84 /* Colors.swift */; };
+		28D7E1C72A5341DA00254B84 /* Selector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D7E1C62A5341DA00254B84 /* Selector.swift */; };
+		28D7E1C92A5347CB00254B84 /* RankList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D7E1C82A5347CB00254B84 /* RankList.swift */; };
+		28D7E1CC2A5349F400254B84 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 28D7E1CB2A5349F400254B84 /* Kingfisher */; };
+		28D7E1CE2A534C2300254B84 /* satoshi.otf in Resources */ = {isa = PBXBuildFile; fileRef = 28D7E1CD2A534C2300254B84 /* satoshi.otf */; };
+		28D7E1D02A5351CC00254B84 /* View+EdgeShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D7E1CF2A5351CC00254B84 /* View+EdgeShadow.swift */; };
+		28D7E1D22A53548900254B84 /* FriendsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D7E1D12A53548900254B84 /* FriendsList.swift */; };
+		28D7E1D42A5357FC00254B84 /* ContactStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D7E1D32A5357FC00254B84 /* ContactStore.swift */; };
+		28D7E1D62A53590300254B84 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D7E1D52A53590300254B84 /* CardView.swift */; };
+		28D7E1D82A535B4C00254B84 /* PhotoBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D7E1D72A535B4C00254B84 /* PhotoBackground.swift */; };
+		28D7E1DA2A5367F400254B84 /* CornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D7E1D92A5367F400254B84 /* CornerRadius.swift */; };
+		28D7E1DC2A536AB100254B84 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D7E1DB2A536AB100254B84 /* Model.swift */; };
+		28D7E1DE2A5379E800254B84 /* SeeMoneyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D7E1DD2A5379E800254B84 /* SeeMoneyView.swift */; };
+		28D7E1E02A537AD200254B84 /* RowButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D7E1DF2A537AD200254B84 /* RowButtonStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +37,24 @@
 		28B2541E2A4E910E00C9C914 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		28B254202A4E910F00C9C914 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		28B254232A4E910F00C9C914 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		28D7E1B82A533B1200254B84 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		28D7E1BA2A533EB700254B84 /* WLButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WLButtonStyle.swift; sourceTree = "<group>"; };
+		28D7E1BC2A533EF500254B84 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		28D7E1BF2A533F2D00254B84 /* LabGrotesque-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LabGrotesque-Medium.ttf"; sourceTree = "<group>"; };
+		28D7E1C12A533F8D00254B84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		28D7E1C22A53407700254B84 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		28D7E1C62A5341DA00254B84 /* Selector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Selector.swift; sourceTree = "<group>"; };
+		28D7E1C82A5347CB00254B84 /* RankList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankList.swift; sourceTree = "<group>"; };
+		28D7E1CD2A534C2300254B84 /* satoshi.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = satoshi.otf; sourceTree = "<group>"; };
+		28D7E1CF2A5351CC00254B84 /* View+EdgeShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+EdgeShadow.swift"; sourceTree = "<group>"; };
+		28D7E1D12A53548900254B84 /* FriendsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsList.swift; sourceTree = "<group>"; };
+		28D7E1D32A5357FC00254B84 /* ContactStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactStore.swift; sourceTree = "<group>"; };
+		28D7E1D52A53590300254B84 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		28D7E1D72A535B4C00254B84 /* PhotoBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoBackground.swift; sourceTree = "<group>"; };
+		28D7E1D92A5367F400254B84 /* CornerRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerRadius.swift; sourceTree = "<group>"; };
+		28D7E1DB2A536AB100254B84 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		28D7E1DD2A5379E800254B84 /* SeeMoneyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeeMoneyView.swift; sourceTree = "<group>"; };
+		28D7E1DF2A537AD200254B84 /* RowButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowButtonStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28D7E1CC2A5349F400254B84 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,9 +88,26 @@
 		28B2541B2A4E910E00C9C914 /* WealthLeaderboard */ = {
 			isa = PBXGroup;
 			children = (
+				28D7E1C12A533F8D00254B84 /* Info.plist */,
 				28B2541C2A4E910E00C9C914 /* WealthLeaderboardApp.swift */,
 				28B2541E2A4E910E00C9C914 /* ContentView.swift */,
+				28D7E1DF2A537AD200254B84 /* RowButtonStyle.swift */,
+				28D7E1DD2A5379E800254B84 /* SeeMoneyView.swift */,
+				28D7E1DB2A536AB100254B84 /* Model.swift */,
+				28D7E1D52A53590300254B84 /* CardView.swift */,
+				28D7E1D92A5367F400254B84 /* CornerRadius.swift */,
+				28D7E1D32A5357FC00254B84 /* ContactStore.swift */,
+				28D7E1D12A53548900254B84 /* FriendsList.swift */,
+				28D7E1C62A5341DA00254B84 /* Selector.swift */,
+				28D7E1C82A5347CB00254B84 /* RankList.swift */,
+				28D7E1D72A535B4C00254B84 /* PhotoBackground.swift */,
+				28D7E1CF2A5351CC00254B84 /* View+EdgeShadow.swift */,
+				28D7E1BA2A533EB700254B84 /* WLButtonStyle.swift */,
+				28D7E1C22A53407700254B84 /* Colors.swift */,
+				28D7E1BC2A533EF500254B84 /* Fonts.swift */,
+				28D7E1B72A533AF100254B84 /* Models */,
 				28B254202A4E910F00C9C914 /* Assets.xcassets */,
+				28D7E1BE2A533F0A00254B84 /* Assets */,
 				28B254222A4E910F00C9C914 /* Preview Content */,
 			);
 			path = WealthLeaderboard;
@@ -65,6 +119,23 @@
 				28B254232A4E910F00C9C914 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		28D7E1B72A533AF100254B84 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				28D7E1B82A533B1200254B84 /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		28D7E1BE2A533F0A00254B84 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				28D7E1BF2A533F2D00254B84 /* LabGrotesque-Medium.ttf */,
+				28D7E1CD2A534C2300254B84 /* satoshi.otf */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +154,9 @@
 			dependencies = (
 			);
 			name = WealthLeaderboard;
+			packageProductDependencies = (
+				28D7E1CB2A5349F400254B84 /* Kingfisher */,
+			);
 			productName = WealthLeaderboard;
 			productReference = 28B254192A4E910E00C9C914 /* WealthLeaderboard.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +185,9 @@
 				Base,
 			);
 			mainGroup = 28B254102A4E910E00C9C914;
+			packageReferences = (
+				28D7E1CA2A5349F400254B84 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 28B2541A2A4E910E00C9C914 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -125,6 +202,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28D7E1C02A533F2D00254B84 /* LabGrotesque-Medium.ttf in Resources */,
+				28D7E1CE2A534C2300254B84 /* satoshi.otf in Resources */,
 				28B254242A4E910F00C9C914 /* Preview Assets.xcassets in Resources */,
 				28B254212A4E910F00C9C914 /* Assets.xcassets in Resources */,
 			);
@@ -137,8 +216,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28D7E1DC2A536AB100254B84 /* Model.swift in Sources */,
 				28B2541F2A4E910E00C9C914 /* ContentView.swift in Sources */,
+				28D7E1D22A53548900254B84 /* FriendsList.swift in Sources */,
+				28D7E1C92A5347CB00254B84 /* RankList.swift in Sources */,
+				28D7E1C32A53407700254B84 /* Colors.swift in Sources */,
+				28D7E1BD2A533EF500254B84 /* Fonts.swift in Sources */,
 				28B2541D2A4E910E00C9C914 /* WealthLeaderboardApp.swift in Sources */,
+				28D7E1BB2A533EB700254B84 /* WLButtonStyle.swift in Sources */,
+				28D7E1D02A5351CC00254B84 /* View+EdgeShadow.swift in Sources */,
+				28D7E1DA2A5367F400254B84 /* CornerRadius.swift in Sources */,
+				28D7E1E02A537AD200254B84 /* RowButtonStyle.swift in Sources */,
+				28D7E1D42A5357FC00254B84 /* ContactStore.swift in Sources */,
+				28D7E1B92A533B1200254B84 /* User.swift in Sources */,
+				28D7E1D62A53590300254B84 /* CardView.swift in Sources */,
+				28D7E1DE2A5379E800254B84 /* SeeMoneyView.swift in Sources */,
+				28D7E1D82A535B4C00254B84 /* PhotoBackground.swift in Sources */,
+				28D7E1C72A5341DA00254B84 /* Selector.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +364,7 @@
 				DEVELOPMENT_TEAM = GA42SWSGPU;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WealthLeaderboard/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -299,6 +394,7 @@
 				DEVELOPMENT_TEAM = GA42SWSGPU;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WealthLeaderboard/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -339,6 +435,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		28D7E1CA2A5349F400254B84 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		28D7E1CB2A5349F400254B84 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 28D7E1CA2A5349F400254B84 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 28B254112A4E910E00C9C914 /* Project object */;
 }
