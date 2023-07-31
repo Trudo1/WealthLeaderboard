@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import SwizzleStorage
+import Swizzle
 
 class Model: ObservableObject {
     @Published var firstName: String = ""
@@ -16,8 +16,12 @@ class Model: ObservableObject {
     
     init() {
         Task {
-            let users: [User] = try await Swizzle.shared.get("getAllUsersByRank")
-            self.allUsers = users
+            do{
+                let users: [User] = try await Swizzle.shared.get("allUserRanks")
+                self.allUsers = users
+            } catch {
+                print(error)
+            }
         }
     }
     
