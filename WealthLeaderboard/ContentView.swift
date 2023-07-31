@@ -20,6 +20,12 @@ struct ContentView: View {
         case global, friends
     }
     
+    @State private var getStartedPage = GetStarted.link
+    
+    enum GetStarted {
+        case link, first, last, picture
+    }
+    
     var buttonText: String {
         "See where you rank"
     }
@@ -44,9 +50,17 @@ struct ContentView: View {
                         isPresentingSignUp = false
                     }
 
-                CardView(showMoney: true, topText: "link.bank") {
-                    linkContent
-                }
+//                switch getStartedPage {
+//                case .link:
+                    CardView(showMoney: true, topText: "link.bank") {
+                        linkContent
+                    }
+//                case .name:
+//                    CardView(topText: "first.name") {
+//                        firstNameContent
+//                    }
+//                }
+                
             }
         }
         .animation(.spring(), value: isPresentingSignUp)
@@ -77,7 +91,7 @@ struct ContentView: View {
                 .edgeShadow(show: true)
                 .tag(Page.friends)
         }
-        .tabViewStyle(.page)
+        .tabViewStyle(.page(indexDisplayMode: .never))
     }
     
     var button: some View {
@@ -109,6 +123,21 @@ struct ContentView: View {
             .background {
                 Capsule()
                     .stroke(lineWidth: 1.3)
+            }
+        
+        Button("Continue") {
+            getStartedPage = .first
+        }
+        .buttonStyle(WLButtonStyle())
+    }
+    
+    @ViewBuilder
+    var firstNameContent: some View {
+        TextField("First name", text: $model.firstName)
+            .frame(maxWidth: .infinity)
+            .background {
+                Capsule()
+                    .stroke(lineWidth: 1.5)
             }
         
         Button("Continue") {

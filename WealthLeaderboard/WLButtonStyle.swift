@@ -8,10 +8,23 @@
 import SwiftUI
 
 struct WLButtonStyle: ButtonStyle {
+    @Binding var loading: Bool
+    
+    init(loading: Binding<Bool> = .constant(false)) {
+        self._loading = loading
+    }
+    
     let feedbackGenerator = UIImpactFeedbackGenerator(style: .medium)
     
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
+            .opacity(loading ? 0 : 1)
+            .overlay {
+                if loading {
+                    LoadingView()
+                        .foregroundColor(.black)
+                }
+            }
             .font(.medium)
             .frame(maxWidth: .infinity)
             .padding(.vertical, 12)

@@ -6,13 +6,20 @@
 //
 
 import SwiftUI
+import SwizzleStorage
 
 class Model: ObservableObject {
     @Published var firstName: String = ""
     @Published var lastName: String = ""
     @Published var photo: UIImage?
+    @Published var allUsers: [User] = []
     
-    var signedUp: Bool {
-        photo != nil
+    init() {
+        Task {
+            let users: [User] = try await Swizzle.shared.get("getAllUsersByRank")
+            self.allUsers = users
+        }
     }
+    
+    var signedUp: Bool { photo != nil }
 }

@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwizzleStorage
 
 @main
 struct WealthLeaderboardApp: App {
@@ -22,6 +23,7 @@ struct WealthLeaderboardApp: App {
     }
     
     init() {
+        Swizzle.shared.configure(projectId: "YourProjectID")
 //        for family in UIFont.familyNames.sorted() {
 //            let names = UIFont.fontNames(forFamilyName: family)
 //            print("Family: \(family) Font names: \(names)")

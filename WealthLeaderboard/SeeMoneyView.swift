@@ -9,6 +9,9 @@ import SwiftUI
 import Kingfisher
 
 struct SeeMoneyView: View {
+    @State var purchased = false
+    @State var loading = false
+    
     var user: User
     
     var body: some View {
@@ -43,10 +46,18 @@ struct SeeMoneyView: View {
             .drawingGroup()
             
             HStack {
-                Image("lock")
-                Text("Their balance is hidden")
-                    .font(.medium)
+                if !purchased {
+                    Image("lock")
+                    Text("Their balance is hidden")
+                } else {
+                    Text("Bank balance:")
+                    Spacer()
+                    Text(user.balance.dollarFormat)
+                }
             }
+            .drawingGroup()
+            .padding(.horizontal, 22)
+            .font(.medium)
             .frame(maxWidth: .infinity)
             .padding(.vertical, 12.5)
             .overlay {
@@ -54,9 +65,30 @@ struct SeeMoneyView: View {
                     .stroke(lineWidth: 1.5)
             }
             
-            Button("See how much money they have") {
+            if !purchased {
+                Button("See how much money they have") {
+                    IAPHandler.shared.fetchAvailableProducts { products in
+                        loading = true
+                        guard let product = products.first else {
+                            return
+                        }
+                        IAPHandler.shared.purchase(product: product) { type, product, transaction in
+                            switch type {
+                            case .purchased:
+                                purchased = true
+                            default:
+                                return
+                            }
+                            loading = false
+                        }
+                        
+                    }
+                }
+                .buttonStyle(WLButtonStyle(loading: $loading))
             }
-            .buttonStyle(WLButtonStyle())
+        }
+        .onDisappear {
+            purchased = false
         }
     }
 }

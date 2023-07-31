@@ -5,8 +5,35 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/onevcat/Kingfisher",
       "state" : {
-        "revision" : "c1f60c63f356d364f4284ba82961acbe7de79bcc",
-        "version" : "7.8.1"
+        "revision" : "c75584ac759cbb16b204d0a7de3ebf53ea6b304d",
+        "version" : "7.9.0"
+      }
+    },
+    {
+      "identity" : "lottie-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/airbnb/lottie-ios",
+      "state" : {
+        "revision" : "d6feea26a370019b4d3a85f5984cb95a2734776f",
+        "version" : "4.2.0"
+      }
+    },
+    {
+      "identity" : "plaid-link-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/plaid/plaid-link-ios",
+      "state" : {
+        "revision" : "b5d0367bb2381658e8e9098621247c909fd8972f",
+        "version" : "4.5.1"
+      }
+    },
+    {
+      "identity" : "swizzleswift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Lucky-Technology-Corporation/SwizzleSwift",
+      "state" : {
+        "branch" : "main",
+        "revision" : "6d95c4c0cf319f6e15012f264f3f56333c39b01b"
       }
     }
   ],

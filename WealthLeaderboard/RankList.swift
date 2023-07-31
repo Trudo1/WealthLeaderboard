@@ -9,10 +9,11 @@ import SwiftUI
 import Kingfisher
 
 struct RankList: View {
+    @EnvironmentObject var model: Model
     @Binding var selectedUser: User?
     
     var users: [User] {
-        User.top.sorted(by: { $0.balance > $1.balance })
+        model.allUsers.sorted(by: { $0.balance > $1.balance })
     }
     
     var body: some View {

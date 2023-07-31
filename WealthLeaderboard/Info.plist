@@ -7,7 +7,5 @@
 		<string>LabGrotesque-Medium.ttf</string>
 		<string>satoshi.otf</string>
 	</array>
-	<key>NSContactsUsageDescription</key>
-	<string>Enable contacts to see which of your friends are on Wealth Leaderboard and where you rank amongst them.</string>
 </dict>
 </plist>
