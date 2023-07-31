@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		2801693D2A71A96C009D800E /* LinkKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2801693C2A71A96C009D800E /* LinkKit */; };
-		280169482A773606009D800E /* SwizzleStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 280169472A773606009D800E /* SwizzleStorage */; };
 		28B2541D2A4E910E00C9C914 /* WealthLeaderboardApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B2541C2A4E910E00C9C914 /* WealthLeaderboardApp.swift */; };
 		28B2541F2A4E910E00C9C914 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B2541E2A4E910E00C9C914 /* ContentView.swift */; };
 		28B254212A4E910F00C9C914 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28B254202A4E910F00C9C914 /* Assets.xcassets */; };
@@ -37,6 +36,7 @@
 		28D7E1E92A538D5900254B84 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 28D7E1E82A538D5900254B84 /* Lottie */; };
 		28D7E1EC2A538D7100254B84 /* loading.json in Resources */ = {isa = PBXBuildFile; fileRef = 28D7E1EB2A538D7100254B84 /* loading.json */; };
 		28D7E1EE2A538E2400254B84 /* Int+DollarFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D7E1ED2A538E2400254B84 /* Int+DollarFormat.swift */; };
+		66472BD42A77A39E00F59174 /* Swizzle in Frameworks */ = {isa = PBXBuildFile; productRef = 66472BD32A77A39E00F59174 /* Swizzle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,7 +78,7 @@
 				2801693D2A71A96C009D800E /* LinkKit in Frameworks */,
 				28D7E1CC2A5349F400254B84 /* Kingfisher in Frameworks */,
 				28D7E1E92A538D5900254B84 /* Lottie in Frameworks */,
-				280169482A773606009D800E /* SwizzleStorage in Frameworks */,
+				66472BD42A77A39E00F59174 /* Swizzle in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -179,7 +179,7 @@
 				28D7E1CB2A5349F400254B84 /* Kingfisher */,
 				28D7E1E82A538D5900254B84 /* Lottie */,
 				2801693C2A71A96C009D800E /* LinkKit */,
-				280169472A773606009D800E /* SwizzleStorage */,
+				66472BD32A77A39E00F59174 /* Swizzle */,
 			);
 			productName = WealthLeaderboard;
 			productReference = 28B254192A4E910E00C9C914 /* WealthLeaderboard.app */;
@@ -213,7 +213,7 @@
 				28D7E1CA2A5349F400254B84 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				28D7E1E72A538D5900254B84 /* XCRemoteSwiftPackageReference "lottie-ios" */,
 				2801693B2A71A96C009D800E /* XCRemoteSwiftPackageReference "plaid-link-ios" */,
-				280169462A773605009D800E /* XCRemoteSwiftPackageReference "SwizzleSwift" */,
+				66472BD22A77A39E00F59174 /* XCRemoteSwiftPackageReference "SwizzleSwift" */,
 			);
 			productRefGroup = 28B2541A2A4E910E00C9C914 /* Products */;
 			projectDirPath = "";
@@ -485,14 +485,6 @@
 				minimumVersion = 4.0.0;
 			};
 		};
-		280169462A773605009D800E /* XCRemoteSwiftPackageReference "SwizzleSwift" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Lucky-Technology-Corporation/SwizzleSwift";
-			requirement = {
-				branch = main;
-				kind = branch;
-			};
-		};
 		28D7E1CA2A5349F400254B84 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher";
@@ -509,6 +501,14 @@
 				minimumVersion = 4.0.0;
 			};
 		};
+		66472BD22A77A39E00F59174 /* XCRemoteSwiftPackageReference "SwizzleSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Lucky-Technology-Corporation/SwizzleSwift";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -516,11 +516,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 2801693B2A71A96C009D800E /* XCRemoteSwiftPackageReference "plaid-link-ios" */;
 			productName = LinkKit;
-		};
-		280169472A773606009D800E /* SwizzleStorage */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 280169462A773605009D800E /* XCRemoteSwiftPackageReference "SwizzleSwift" */;
-			productName = SwizzleStorage;
 		};
 		28D7E1CB2A5349F400254B84 /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
@@ -531,6 +526,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 28D7E1E72A538D5900254B84 /* XCRemoteSwiftPackageReference "lottie-ios" */;
 			productName = Lottie;
+		};
+		66472BD32A77A39E00F59174 /* Swizzle */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 66472BD22A77A39E00F59174 /* XCRemoteSwiftPackageReference "SwizzleSwift" */;
+			productName = Swizzle;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

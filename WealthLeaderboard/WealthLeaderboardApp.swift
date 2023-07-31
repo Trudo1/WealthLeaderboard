@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import SwizzleStorage
+import Swizzle
 
 @main
 struct WealthLeaderboardApp: App {
