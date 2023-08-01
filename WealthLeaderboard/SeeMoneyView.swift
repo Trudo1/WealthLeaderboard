@@ -67,9 +67,10 @@ struct SeeMoneyView: View {
             
             if !purchased {
                 Button("See how much money they have") {
+                    loading = true
                     IAPHandler.shared.fetchAvailableProducts { products in
-                        loading = true
                         guard let product = products.first else {
+                            loading = false
                             return
                         }
                         IAPHandler.shared.purchase(product: product) { type, product, transaction in
@@ -81,10 +82,10 @@ struct SeeMoneyView: View {
                             }
                             loading = false
                         }
-                        
                     }
                 }
                 .buttonStyle(WLButtonStyle(loading: $loading))
+                .disabled(loading)
             }
         }
         .onDisappear {

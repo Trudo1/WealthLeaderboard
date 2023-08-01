@@ -153,8 +153,10 @@ struct OnboardingView: View {
                 }
             
             Button("Continue") {
-                editing = false
-                page = .picture
+                Task {
+                    page = .picture
+                    editing = false
+                }
             }
             .buttonStyle(WLButtonStyle())
         }

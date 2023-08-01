@@ -93,6 +93,13 @@ struct ContentView: View {
                 .tag(Page.friends)
         }
         .tabViewStyle(.page(indexDisplayMode: .never))
+        .refreshable {
+            do {
+                globalRank = try await model.rank
+            } catch {
+                print(error.localizedDescription)
+            }
+        }
     }
     
     @ViewBuilder

@@ -39,5 +39,6 @@ struct WLButtonStyle: ButtonStyle {
                     feedbackGenerator.impactOccurred()
                 }
             }
+            .disabled(loading)
     }
 }

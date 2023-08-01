@@ -18,7 +18,7 @@ class Model: ObservableObject {
     
     var linkToken: String?
     
-    @SwizzleStorage("user") var user: User?
+    @SwizzleStorage("users") var user: User?
     
     var rank: Int {
         get async throws {
@@ -29,8 +29,7 @@ class Model: ObservableObject {
     init() {
         Task {
             do {
-                let users: [User] = try await Swizzle.shared.get("allUserRanks")
-                allUsers = users
+                allUsers = try await Swizzle.shared.get("allUserRanks")
                 let token: String = try await Swizzle.shared.get("plaidLinkToken")
                 linkToken = token
             } catch {
@@ -42,8 +41,10 @@ class Model: ObservableObject {
     var signedUp: Bool { photo != nil }
     
     func createUser() async throws {
+        let name = "\(firstName) \(lastName)"
         let url = try await Swizzle.shared.upload(image: photo ?? UIImage())
-        let user = User(name: "\(firstName) \(lastName)", photoURL: url.absoluteString, balance: balance ?? 0)
+        let user = User(name: name, photoURL: url.absoluteString, balance: balance ?? 0)
+        
         self.user = user
     }
 }
