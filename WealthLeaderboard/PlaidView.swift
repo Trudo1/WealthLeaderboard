@@ -7,6 +7,7 @@
 
 import SwiftUI
 import LinkKit
+import Swizzle
 
 struct PlaidView: View {
     @EnvironmentObject var model: Model
@@ -35,7 +36,10 @@ struct PlaidView: View {
     private func createLinkTokenConfiguration(with token: String) -> LinkTokenConfiguration {
 
         var linkConfiguration = LinkTokenConfiguration(token: token) { success in
-            print("public-token: \(success.publicToken) metadata: \(success.metadata)")
+            Task{
+                print("Exchanging Plaid Token")
+                try await Swizzle.shared.post("exchangePlaidToken", data: success)
+            }
             dismiss()
         }
 
