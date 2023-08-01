@@ -82,14 +82,6 @@ struct CardView<CardContent: View>: View {
     }
 }
 
-struct SheetOffsetKey: PreferenceKey {
-    static var defaultValue: CGFloat = 0
-    
-    static func reduce(value: inout CGFloat, nextValue: () -> CGFloat) {
-        value = nextValue()
-    }
-}
-
 struct CardView_Previews: PreviewProvider {
     static var previews: some View {
         CardView(topText: "link.bank") { }

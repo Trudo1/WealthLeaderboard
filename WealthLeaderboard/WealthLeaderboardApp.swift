@@ -19,6 +19,7 @@ struct WealthLeaderboardApp: App {
                 .environmentObject(contacts)
                 .environmentObject(model)
                 .preferredColorScheme(.light)
+                .tint(.wlGreen)
         }
     }
     

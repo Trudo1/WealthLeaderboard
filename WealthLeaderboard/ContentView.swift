@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct ContentView: View {
     @EnvironmentObject var model: Model
@@ -15,6 +16,16 @@ struct ContentView: View {
     @State private var isPresentingSignUp = false
     
     @State private var userCard: User?
+    @State private var globalRank: Int?
+    @State private var friendsRank: Int?
+    var rank: Int? {
+        switch page {
+        case .friends:
+            return friendsRank
+        case .global:
+            return globalRank
+        }
+    }
     
     enum Page {
         case global, friends
@@ -49,18 +60,8 @@ struct ContentView: View {
                     .onTapGesture {
                         isPresentingSignUp = false
                     }
-
-//                switch getStartedPage {
-//                case .link:
-                    CardView(showMoney: true, topText: "link.bank") {
-                        linkContent
-                    }
-//                case .name:
-//                    CardView(topText: "first.name") {
-//                        firstNameContent
-//                    }
-//                }
-                
+                OnboardingView(showing: $isPresentingSignUp, page: $getStartedPage)
+                    .transition(.move(edge: .bottom))
             }
         }
         .animation(.spring(), value: isPresentingSignUp)
@@ -94,58 +95,53 @@ struct ContentView: View {
         .tabViewStyle(.page(indexDisplayMode: .never))
     }
     
+    @ViewBuilder
     var button: some View {
-        Button(buttonText) {
-//            switch page {
-//            case .global:
+        if let user = model.user {
+            if page == .friends && !(contacts.contactState == .enabled) {
+                Text("hlwrld")
+            } else {
+                HStack(spacing: 21) {
+                    Text("\(rank ?? 0)")
+                        .opacity(rank == nil ? 0 : 1)
+                        .overlay {
+                            if rank == nil {
+                                LoadingView()
+                            }
+                        }
+
+                    Color.clear
+                        .frame(width: 48, height: 48)
+                        .overlay(alignment: .top) {
+                            if let url = URL(string: user.photoURL) {
+                                KFImage(url)
+                                    .resizable()
+                                    .scaledToFill()
+                            }
+                        }
+                        .clipShape(Circle())
+                    Text(user.name)
+                    Spacer()
+                }
+                .font(.large)
+                .padding(.vertical, 12)
+                .padding(.horizontal, 22)
+                .task {
+                    do {
+                        globalRank = try await model.rank
+                    } catch {
+                        print("Error getting user rank")
+                    }
+                }
+            }
+        } else {
+            Button(buttonText) {
                 isPresentingSignUp = true
-//            case .friends:
-//                Task {
-//                    await contacts.requestPermission()
-//                }
-//            }
-        }
-        .buttonStyle(WLButtonStyle())
-        .padding(24)
-    }
-    
-    @ViewBuilder
-    var linkContent: some View {        
-        Text("Link your balance to see where your wealth ranks on the leaderboard")
-            .font(.large)
-            .padding(.horizontal, 11)
-        
-        Text("Don’t worry, your bank balance will be hidden from other users")
-            .font(.sm)
-            .frame(maxWidth: .infinity)
-            .padding(.horizontal, 24)
-            .padding(.vertical, 12)
-            .background {
-                Capsule()
-                    .stroke(lineWidth: 1.3)
             }
-        
-        Button("Continue") {
-            getStartedPage = .first
+            .buttonStyle(WLButtonStyle())
+            .padding(24)
         }
-        .buttonStyle(WLButtonStyle())
     }
-    
-    @ViewBuilder
-    var firstNameContent: some View {
-        TextField("First name", text: $model.firstName)
-            .frame(maxWidth: .infinity)
-            .background {
-                Capsule()
-                    .stroke(lineWidth: 1.5)
-            }
-        
-        Button("Continue") {
-            
-        }
-        .buttonStyle(WLButtonStyle())
-    }
-    
 }
 
 struct ContentView_Previews: PreviewProvider {

@@ -28,12 +28,21 @@
       }
     },
     {
+      "identity" : "screencorners",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/kylebshr/ScreenCorners",
+      "state" : {
+        "branch" : "main",
+        "revision" : "f9ab802d820e07b33167b58ef520790c2c9bb720"
+      }
+    },
+    {
       "identity" : "swizzleswift",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/Lucky-Technology-Corporation/SwizzleSwift",
       "state" : {
         "branch" : "main",
-        "revision" : "02a58d59bfcf3caf08439ee146c3e4a5b2948d1d"
+        "revision" : "e373796a5c2e4183c60d1aeda3fde4e95ce65ca8"
       }
     }
   ],

@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		2801693D2A71A96C009D800E /* LinkKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2801693C2A71A96C009D800E /* LinkKit */; };
+		2801694A2A78634A009D800E /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280169492A78634A009D800E /* OnboardingView.swift */; };
+		2801694C2A7865ED009D800E /* AnyTransition+forward.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2801694B2A7865ED009D800E /* AnyTransition+forward.swift */; };
+		2801694F2A786A85009D800E /* ScreenCorners in Frameworks */ = {isa = PBXBuildFile; productRef = 2801694E2A786A85009D800E /* ScreenCorners */; };
+		280169512A78708A009D800E /* AddPhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280169502A78708A009D800E /* AddPhotoView.swift */; };
+		280169532A7882EA009D800E /* EditPhotoButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280169522A7882EA009D800E /* EditPhotoButton.swift */; };
+		280169552A788F03009D800E /* PlaidView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280169542A788F03009D800E /* PlaidView.swift */; };
+		280169572A78A39C009D800E /* LinkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280169562A78A39C009D800E /* LinkController.swift */; };
 		28B2541D2A4E910E00C9C914 /* WealthLeaderboardApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B2541C2A4E910E00C9C914 /* WealthLeaderboardApp.swift */; };
 		28B2541F2A4E910E00C9C914 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B2541E2A4E910E00C9C914 /* ContentView.swift */; };
 		28B254212A4E910F00C9C914 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28B254202A4E910F00C9C914 /* Assets.xcassets */; };
@@ -40,6 +47,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		280169492A78634A009D800E /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		2801694B2A7865ED009D800E /* AnyTransition+forward.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AnyTransition+forward.swift"; sourceTree = "<group>"; };
+		280169502A78708A009D800E /* AddPhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPhotoView.swift; sourceTree = "<group>"; };
+		280169522A7882EA009D800E /* EditPhotoButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPhotoButton.swift; sourceTree = "<group>"; };
+		280169542A788F03009D800E /* PlaidView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaidView.swift; sourceTree = "<group>"; };
+		280169562A78A39C009D800E /* LinkController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkController.swift; sourceTree = "<group>"; };
 		28B254192A4E910E00C9C914 /* WealthLeaderboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WealthLeaderboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28B2541C2A4E910E00C9C914 /* WealthLeaderboardApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WealthLeaderboardApp.swift; sourceTree = "<group>"; };
 		28B2541E2A4E910E00C9C914 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -78,6 +91,7 @@
 				2801693D2A71A96C009D800E /* LinkKit in Frameworks */,
 				28D7E1CC2A5349F400254B84 /* Kingfisher in Frameworks */,
 				28D7E1E92A538D5900254B84 /* Lottie in Frameworks */,
+				2801694F2A786A85009D800E /* ScreenCorners in Frameworks */,
 				66472BD42A77A39E00F59174 /* Swizzle in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -119,10 +133,16 @@
 				28D7E1C62A5341DA00254B84 /* Selector.swift */,
 				28D7E1C82A5347CB00254B84 /* RankList.swift */,
 				28D7E1D72A535B4C00254B84 /* PhotoBackground.swift */,
+				280169542A788F03009D800E /* PlaidView.swift */,
+				280169562A78A39C009D800E /* LinkController.swift */,
 				28D7E1CF2A5351CC00254B84 /* View+EdgeShadow.swift */,
 				28D7E1BA2A533EB700254B84 /* WLButtonStyle.swift */,
 				28D7E1E32A538CD100254B84 /* LoadingView.swift */,
 				28D7E1E52A538CE300254B84 /* LottieView.swift */,
+				280169492A78634A009D800E /* OnboardingView.swift */,
+				280169522A7882EA009D800E /* EditPhotoButton.swift */,
+				280169502A78708A009D800E /* AddPhotoView.swift */,
+				2801694B2A7865ED009D800E /* AnyTransition+forward.swift */,
 				28D7E1C22A53407700254B84 /* Colors.swift */,
 				28D7E1BC2A533EF500254B84 /* Fonts.swift */,
 				28D7E1B72A533AF100254B84 /* Models */,
@@ -180,6 +200,7 @@
 				28D7E1E82A538D5900254B84 /* Lottie */,
 				2801693C2A71A96C009D800E /* LinkKit */,
 				66472BD32A77A39E00F59174 /* Swizzle */,
+				2801694E2A786A85009D800E /* ScreenCorners */,
 			);
 			productName = WealthLeaderboard;
 			productReference = 28B254192A4E910E00C9C914 /* WealthLeaderboard.app */;
@@ -214,6 +235,7 @@
 				28D7E1E72A538D5900254B84 /* XCRemoteSwiftPackageReference "lottie-ios" */,
 				2801693B2A71A96C009D800E /* XCRemoteSwiftPackageReference "plaid-link-ios" */,
 				66472BD22A77A39E00F59174 /* XCRemoteSwiftPackageReference "SwizzleSwift" */,
+				2801694D2A786A85009D800E /* XCRemoteSwiftPackageReference "ScreenCorners" */,
 			);
 			productRefGroup = 28B2541A2A4E910E00C9C914 /* Products */;
 			projectDirPath = "";
@@ -245,6 +267,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				28D7E1DC2A536AB100254B84 /* Model.swift in Sources */,
+				2801694C2A7865ED009D800E /* AnyTransition+forward.swift in Sources */,
 				28D7E1EE2A538E2400254B84 /* Int+DollarFormat.swift in Sources */,
 				28B2541F2A4E910E00C9C914 /* ContentView.swift in Sources */,
 				28D7E1D22A53548900254B84 /* FriendsList.swift in Sources */,
@@ -262,9 +285,14 @@
 				28D7E1B92A533B1200254B84 /* User.swift in Sources */,
 				28D7E1D62A53590300254B84 /* CardView.swift in Sources */,
 				28D7E1DE2A5379E800254B84 /* SeeMoneyView.swift in Sources */,
+				280169552A788F03009D800E /* PlaidView.swift in Sources */,
+				280169512A78708A009D800E /* AddPhotoView.swift in Sources */,
+				280169572A78A39C009D800E /* LinkController.swift in Sources */,
+				280169532A7882EA009D800E /* EditPhotoButton.swift in Sources */,
 				28D7E1D82A535B4C00254B84 /* PhotoBackground.swift in Sources */,
 				28D7E1E42A538CD100254B84 /* LoadingView.swift in Sources */,
 				28D7E1C72A5341DA00254B84 /* Selector.swift in Sources */,
+				2801694A2A78634A009D800E /* OnboardingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -485,6 +513,14 @@
 				minimumVersion = 4.0.0;
 			};
 		};
+		2801694D2A786A85009D800E /* XCRemoteSwiftPackageReference "ScreenCorners" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kylebshr/ScreenCorners";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 		28D7E1CA2A5349F400254B84 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher";
@@ -516,6 +552,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 2801693B2A71A96C009D800E /* XCRemoteSwiftPackageReference "plaid-link-ios" */;
 			productName = LinkKit;
+		};
+		2801694E2A786A85009D800E /* ScreenCorners */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2801694D2A786A85009D800E /* XCRemoteSwiftPackageReference "ScreenCorners" */;
+			productName = ScreenCorners;
 		};
 		28D7E1CB2A5349F400254B84 /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
