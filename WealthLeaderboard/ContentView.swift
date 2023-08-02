@@ -10,7 +10,6 @@ import Kingfisher
 
 struct ContentView: View {
     @EnvironmentObject var model: Model
-    @EnvironmentObject var contacts: ContactStore
     
     @State private var page: Page = .global
     @State private var isPresentingSignUp = false
@@ -27,6 +26,8 @@ struct ContentView: View {
         }
     }
     
+    let productLink = URL(string: "https://testflight.apple.com/join/CGNlyZDN")!
+    
     enum Page {
         case global, friends
     }
@@ -34,7 +35,7 @@ struct ContentView: View {
     @State private var getStartedPage = GetStarted.link
     
     enum GetStarted {
-        case link, first, last, picture
+        case link, first, last, phone, picture
     }
     
     var buttonText: String {
@@ -105,39 +106,66 @@ struct ContentView: View {
     @ViewBuilder
     var button: some View {
         if let user = model.user {
-            if page == .friends && !(contacts.contactState == .enabled) {
-                Text("hlwrld")
-            } else {
-                HStack(spacing: 21) {
-                    Text("\(rank ?? 0)")
-                        .opacity(rank == nil ? 0 : 1)
-                        .overlay {
-                            if rank == nil {
-                                LoadingView()
-                            }
+            HStack(spacing: 21) {
+                Text("\(rank ?? 0)")
+                    .opacity(rank == nil ? 0 : 1)
+                    .overlay {
+                        if rank == nil {
+                            LoadingView()
                         }
+                    }
+                    .frame(minWidth: 22)
 
-                    Color.clear
-                        .frame(width: 48, height: 48)
-                        .overlay(alignment: .top) {
-                            if let url = URL(string: user.photoURL) {
-                                KFImage(url)
-                                    .resizable()
-                                    .scaledToFill()
+                Color.clear
+                    .frame(width: 48, height: 48)
+                    .overlay(alignment: .top) {
+                        if let url = URL(string: user.photoURL) {
+                            KFImage(url)
+                                .resizable()
+                                .scaledToFill()
+                        }
+                    }
+                    .clipShape(Circle())
+                Text(user.name)
+                Spacer()
+            }
+            .onTapGesture {
+                model.user?.name = "a"
+            }
+            .font(.large)
+            .padding(.vertical, 12)
+            .padding(.horizontal, 22)
+            .task {
+                do {
+                    globalRank = try await model.rank
+                } catch {
+                    print("Error getting user rank")
+                }
+            }
+            .opacity(page == .friends && model.contacts.isEmpty ? 0 : 1)
+            .overlay {
+                if page == .friends {
+                    if !(model.contactState == .enabled) {
+                        Button("Enable Contacts") {
+                            Task {
+                                await model.requestPermission()
                             }
                         }
-                        .clipShape(Circle())
-                    Text(user.name)
-                    Spacer()
-                }
-                .font(.large)
-                .padding(.vertical, 12)
-                .padding(.horizontal, 22)
-                .task {
-                    do {
-                        globalRank = try await model.rank
-                    } catch {
-                        print("Error getting user rank")
+                        .buttonStyle(WLButtonStyle())
+                        .padding()
+                    } else if model.contacts.isEmpty {
+                        ShareLink(item: productLink) {
+                            Text("Invite your friends")
+                                .font(.medium)
+                                .foregroundColor(.black)
+                                .frame(maxWidth: .infinity)
+                                .padding(.vertical, 12)
+                                .background {
+                                    RoundedRectangle(cornerRadius: 10, style: .continuous)
+                                        .foregroundColor(.wlGreen)
+                                }
+                        }
+                        .padding()
                     }
                 }
             }

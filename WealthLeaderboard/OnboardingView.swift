@@ -44,6 +44,11 @@ struct OnboardingView: View {
                         .zIndex(1)
                         .transition(.forward)
                         .padding(.horizontal)
+                case .phone:
+                    phone
+                        .zIndex(1)
+                        .transition(.forward)
+                        .padding(.horizontal)
                 case .picture:
                     addPhoto
                         .zIndex(1)
@@ -64,7 +69,7 @@ struct OnboardingView: View {
         .frame(maxWidth: .infinity)
         .sheet(isPresented: $showPlaid) {
             Task {
-                // TODO: Make sure there is a balance here
+                // TODO: make sure balance is not nil
 //                if model.balance != nil {
                     page = .first
 //                }
@@ -146,6 +151,33 @@ struct OnboardingView: View {
                     editing = true
                 }
                 .frame(maxWidth: .infinity)
+                .padding(.vertical, 12)
+                .background {
+                    Capsule()
+                        .stroke(lineWidth: 1.5)
+                }
+            
+            Button("Continue") {
+                Task {
+                    page = .phone
+                    editing = false
+                }
+            }
+            .buttonStyle(WLButtonStyle())
+        }
+    }
+    
+    @ViewBuilder
+    var phone: some View {
+        VStack(spacing: 30) {
+            Image("phone")
+            
+            PhoneNumberField(phoneNumber: $model.phoneNumber)
+                .focused($editing)
+                .task {
+                    editing = true
+                }
+                .frame(maxWidth: .infinity, maxHeight: 22)
                 .padding(.vertical, 12)
                 .background {
                     Capsule()

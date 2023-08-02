@@ -12,6 +12,7 @@ struct User: Identifiable, Hashable, Codable {
     var name: String
     var photoURL: String
     var balance: Int
+    var phone: String?
 }
 
 extension [User] {

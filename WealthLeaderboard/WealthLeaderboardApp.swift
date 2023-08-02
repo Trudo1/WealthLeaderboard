@@ -10,13 +10,11 @@ import Swizzle
 
 @main
 struct WealthLeaderboardApp: App {
-    @StateObject var contacts = ContactStore()
     @StateObject var model = Model()
     
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .environmentObject(contacts)
                 .environmentObject(model)
                 .preferredColorScheme(.light)
                 .tint(.wlGreen)
@@ -25,9 +23,5 @@ struct WealthLeaderboardApp: App {
     
     init() {
         Swizzle.shared.configure(projectId: "YourProjectID")
-//        for family in UIFont.familyNames.sorted() {
-//            let names = UIFont.fontNames(forFamilyName: family)
-//            print("Family: \(family) Font names: \(names)")
-//        }
     }
 }

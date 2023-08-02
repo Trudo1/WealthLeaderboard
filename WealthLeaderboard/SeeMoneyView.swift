@@ -69,11 +69,15 @@ struct SeeMoneyView: View {
                 Button("See how much money they have") {
                     loading = true
                     IAPHandler.shared.fetchAvailableProducts { products in
+                        print("fetching")
                         guard let product = products.first else {
+                            print("can't find product")
                             loading = false
                             return
                         }
+                        print("product: \(product)")
                         IAPHandler.shared.purchase(product: product) { type, product, transaction in
+                            print("purchasing")
                             switch type {
                             case .purchased:
                                 purchased = true

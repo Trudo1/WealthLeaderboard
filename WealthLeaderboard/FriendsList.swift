@@ -11,8 +11,23 @@ struct FriendsList: View {
     @EnvironmentObject var model: Model
     
     var body: some View {
-        buildContent(image: "sign.up", text: "Sign up to see where your friends rank amongst the wealth leaderboard")
-//        buildContent(image: "enable.contacts", text: "Enable contacts to see where your friends rank amongst the wealth leaderboard")
+        if model.signedUp {
+            if !(model.authStatus == .enabled) {
+                buildContent(image: "enable.contacts", text: "Enable contacts to see where your friends rank amongst the wealth leaderboard")
+            } else {
+                if model.contacts.isEmpty {
+                    buildContent(image: "no.contacts", text: "")
+                } else {
+                    contactsList
+                }
+            }
+        } else {
+            buildContent(image: "sign.up", text: "Sign up to see where your friends rank amongst the wealth leaderboard")
+        }
+    }
+    
+    var contactsList: some View {
+        Text("Coming soon")
     }
     
     func buildContent(image: String, text: String) -> some View {
@@ -29,7 +44,7 @@ struct FriendsList: View {
                 .padding(.horizontal, 20)
                 .padding(.top, 5)
         }
-        .frame(maxHeight: .infinity)
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
 }
 

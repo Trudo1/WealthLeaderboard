@@ -15,6 +15,10 @@
 		280169532A7882EA009D800E /* EditPhotoButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280169522A7882EA009D800E /* EditPhotoButton.swift */; };
 		280169552A788F03009D800E /* PlaidView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280169542A788F03009D800E /* PlaidView.swift */; };
 		280169572A78A39C009D800E /* LinkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280169562A78A39C009D800E /* LinkController.swift */; };
+		2801695C2A7A21C5009D800E /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2801695B2A7A21C5009D800E /* StoreKit.framework */; };
+		2801695E2A7AEAC8009D800E /* UnformatPhone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2801695D2A7AEAC8009D800E /* UnformatPhone.swift */; };
+		280169612A7AF0AC009D800E /* PhoneNumberKit in Frameworks */ = {isa = PBXBuildFile; productRef = 280169602A7AF0AC009D800E /* PhoneNumberKit */; };
+		280169632A7AF1D4009D800E /* PhoneTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280169622A7AF1D4009D800E /* PhoneTextField.swift */; };
 		28B2541D2A4E910E00C9C914 /* WealthLeaderboardApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B2541C2A4E910E00C9C914 /* WealthLeaderboardApp.swift */; };
 		28B2541F2A4E910E00C9C914 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B2541E2A4E910E00C9C914 /* ContentView.swift */; };
 		28B254212A4E910F00C9C914 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28B254202A4E910F00C9C914 /* Assets.xcassets */; };
@@ -30,7 +34,6 @@
 		28D7E1CE2A534C2300254B84 /* satoshi.otf in Resources */ = {isa = PBXBuildFile; fileRef = 28D7E1CD2A534C2300254B84 /* satoshi.otf */; };
 		28D7E1D02A5351CC00254B84 /* View+EdgeShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D7E1CF2A5351CC00254B84 /* View+EdgeShadow.swift */; };
 		28D7E1D22A53548900254B84 /* FriendsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D7E1D12A53548900254B84 /* FriendsList.swift */; };
-		28D7E1D42A5357FC00254B84 /* ContactStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D7E1D32A5357FC00254B84 /* ContactStore.swift */; };
 		28D7E1D62A53590300254B84 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D7E1D52A53590300254B84 /* CardView.swift */; };
 		28D7E1D82A535B4C00254B84 /* PhotoBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D7E1D72A535B4C00254B84 /* PhotoBackground.swift */; };
 		28D7E1DA2A5367F400254B84 /* CornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D7E1D92A5367F400254B84 /* CornerRadius.swift */; };
@@ -53,6 +56,9 @@
 		280169522A7882EA009D800E /* EditPhotoButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPhotoButton.swift; sourceTree = "<group>"; };
 		280169542A788F03009D800E /* PlaidView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaidView.swift; sourceTree = "<group>"; };
 		280169562A78A39C009D800E /* LinkController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkController.swift; sourceTree = "<group>"; };
+		2801695B2A7A21C5009D800E /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		2801695D2A7AEAC8009D800E /* UnformatPhone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnformatPhone.swift; sourceTree = "<group>"; };
+		280169622A7AF1D4009D800E /* PhoneTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneTextField.swift; sourceTree = "<group>"; };
 		28B254192A4E910E00C9C914 /* WealthLeaderboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WealthLeaderboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28B2541C2A4E910E00C9C914 /* WealthLeaderboardApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WealthLeaderboardApp.swift; sourceTree = "<group>"; };
 		28B2541E2A4E910E00C9C914 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -69,7 +75,6 @@
 		28D7E1CD2A534C2300254B84 /* satoshi.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = satoshi.otf; sourceTree = "<group>"; };
 		28D7E1CF2A5351CC00254B84 /* View+EdgeShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+EdgeShadow.swift"; sourceTree = "<group>"; };
 		28D7E1D12A53548900254B84 /* FriendsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsList.swift; sourceTree = "<group>"; };
-		28D7E1D32A5357FC00254B84 /* ContactStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactStore.swift; sourceTree = "<group>"; };
 		28D7E1D52A53590300254B84 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		28D7E1D72A535B4C00254B84 /* PhotoBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoBackground.swift; sourceTree = "<group>"; };
 		28D7E1D92A5367F400254B84 /* CornerRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerRadius.swift; sourceTree = "<group>"; };
@@ -88,9 +93,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				280169612A7AF0AC009D800E /* PhoneNumberKit in Frameworks */,
 				2801693D2A71A96C009D800E /* LinkKit in Frameworks */,
 				28D7E1CC2A5349F400254B84 /* Kingfisher in Frameworks */,
 				28D7E1E92A538D5900254B84 /* Lottie in Frameworks */,
+				2801695C2A7A21C5009D800E /* StoreKit.framework in Frameworks */,
 				2801694F2A786A85009D800E /* ScreenCorners in Frameworks */,
 				66472BD42A77A39E00F59174 /* Swizzle in Frameworks */,
 			);
@@ -99,11 +106,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2801695A2A7A21C5009D800E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2801695B2A7A21C5009D800E /* StoreKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		28B254102A4E910E00C9C914 = {
 			isa = PBXGroup;
 			children = (
 				28B2541B2A4E910E00C9C914 /* WealthLeaderboard */,
 				28B2541A2A4E910E00C9C914 /* Products */,
+				2801695A2A7A21C5009D800E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -126,9 +142,9 @@
 				28D7E1ED2A538E2400254B84 /* Int+DollarFormat.swift */,
 				28D7E1E12A537F0E00254B84 /* IAPHandler.swift */,
 				28D7E1DB2A536AB100254B84 /* Model.swift */,
+				2801695D2A7AEAC8009D800E /* UnformatPhone.swift */,
 				28D7E1D52A53590300254B84 /* CardView.swift */,
 				28D7E1D92A5367F400254B84 /* CornerRadius.swift */,
-				28D7E1D32A5357FC00254B84 /* ContactStore.swift */,
 				28D7E1D12A53548900254B84 /* FriendsList.swift */,
 				28D7E1C62A5341DA00254B84 /* Selector.swift */,
 				28D7E1C82A5347CB00254B84 /* RankList.swift */,
@@ -140,6 +156,7 @@
 				28D7E1E32A538CD100254B84 /* LoadingView.swift */,
 				28D7E1E52A538CE300254B84 /* LottieView.swift */,
 				280169492A78634A009D800E /* OnboardingView.swift */,
+				280169622A7AF1D4009D800E /* PhoneTextField.swift */,
 				280169522A7882EA009D800E /* EditPhotoButton.swift */,
 				280169502A78708A009D800E /* AddPhotoView.swift */,
 				2801694B2A7865ED009D800E /* AnyTransition+forward.swift */,
@@ -201,6 +218,7 @@
 				2801693C2A71A96C009D800E /* LinkKit */,
 				66472BD32A77A39E00F59174 /* Swizzle */,
 				2801694E2A786A85009D800E /* ScreenCorners */,
+				280169602A7AF0AC009D800E /* PhoneNumberKit */,
 			);
 			productName = WealthLeaderboard;
 			productReference = 28B254192A4E910E00C9C914 /* WealthLeaderboard.app */;
@@ -236,6 +254,7 @@
 				2801693B2A71A96C009D800E /* XCRemoteSwiftPackageReference "plaid-link-ios" */,
 				66472BD22A77A39E00F59174 /* XCRemoteSwiftPackageReference "SwizzleSwift" */,
 				2801694D2A786A85009D800E /* XCRemoteSwiftPackageReference "ScreenCorners" */,
+				2801695F2A7AF0AC009D800E /* XCRemoteSwiftPackageReference "PhoneNumberKit" */,
 			);
 			productRefGroup = 28B2541A2A4E910E00C9C914 /* Products */;
 			projectDirPath = "";
@@ -268,6 +287,7 @@
 			files = (
 				28D7E1DC2A536AB100254B84 /* Model.swift in Sources */,
 				2801694C2A7865ED009D800E /* AnyTransition+forward.swift in Sources */,
+				280169632A7AF1D4009D800E /* PhoneTextField.swift in Sources */,
 				28D7E1EE2A538E2400254B84 /* Int+DollarFormat.swift in Sources */,
 				28B2541F2A4E910E00C9C914 /* ContentView.swift in Sources */,
 				28D7E1D22A53548900254B84 /* FriendsList.swift in Sources */,
@@ -281,8 +301,8 @@
 				28D7E1D02A5351CC00254B84 /* View+EdgeShadow.swift in Sources */,
 				28D7E1DA2A5367F400254B84 /* CornerRadius.swift in Sources */,
 				28D7E1E02A537AD200254B84 /* RowButtonStyle.swift in Sources */,
-				28D7E1D42A5357FC00254B84 /* ContactStore.swift in Sources */,
 				28D7E1B92A533B1200254B84 /* User.swift in Sources */,
+				2801695E2A7AEAC8009D800E /* UnformatPhone.swift in Sources */,
 				28D7E1D62A53590300254B84 /* CardView.swift in Sources */,
 				28D7E1DE2A5379E800254B84 /* SeeMoneyView.swift in Sources */,
 				280169552A788F03009D800E /* PlaidView.swift in Sources */,
@@ -521,6 +541,14 @@
 				kind = branch;
 			};
 		};
+		2801695F2A7AF0AC009D800E /* XCRemoteSwiftPackageReference "PhoneNumberKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/marmelroy/PhoneNumberKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
 		28D7E1CA2A5349F400254B84 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher";
@@ -557,6 +585,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 2801694D2A786A85009D800E /* XCRemoteSwiftPackageReference "ScreenCorners" */;
 			productName = ScreenCorners;
+		};
+		280169602A7AF0AC009D800E /* PhoneNumberKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2801695F2A7AF0AC009D800E /* XCRemoteSwiftPackageReference "PhoneNumberKit" */;
+			productName = PhoneNumberKit;
 		};
 		28D7E1CB2A5349F400254B84 /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;

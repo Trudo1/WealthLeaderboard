@@ -51,6 +51,7 @@ struct RankList: View {
         } label: {
             HStack(spacing: 21) {
                 Text("\(index + 4)")
+                    .frame(minWidth: 22)
                 Color.clear
                     .frame(width: 48, height: 48)
                     .overlay(alignment: .top) {
