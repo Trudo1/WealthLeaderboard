@@ -7,10 +7,12 @@
 
 import SwiftUI
 import Kingfisher
+import Swizzle
 
 struct ContentView: View {
     @EnvironmentObject var model: Model
-    
+    @ObservedObject var user: SwizzleModel<User> = SwizzleModel("users")
+
     @State private var page: Page = .global
     @State private var isPresentingSignUp = false
     
@@ -105,7 +107,7 @@ struct ContentView: View {
     
     @ViewBuilder
     var button: some View {
-        if let user = model.user {
+        if var user = user.object {
             HStack(spacing: 21) {
                 Text("\(rank ?? 0)")
                     .opacity(rank == nil ? 0 : 1)
@@ -130,7 +132,7 @@ struct ContentView: View {
                 Spacer()
             }
             .onTapGesture {
-                model.user?.name = "a"
+                user.name = "a"
             }
             .font(.large)
             .padding(.vertical, 12)
