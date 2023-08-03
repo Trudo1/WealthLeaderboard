@@ -99,6 +99,7 @@ struct ContentView: View {
         .refreshable {
             do {
                 globalRank = try await model.rank
+                user.refresh()
             } catch {
                 print(error.localizedDescription)
             }
