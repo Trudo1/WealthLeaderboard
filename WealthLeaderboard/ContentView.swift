@@ -18,11 +18,10 @@ struct ContentView: View {
     
     @State private var userCard: User?
     @State private var globalRank: Int?
-    @State private var friendsRank: Int?
     var rank: Int? {
         switch page {
         case .friends:
-            return friendsRank
+            return model.friendsRank
         case .global:
             return globalRank
         }
@@ -91,7 +90,7 @@ struct ContentView: View {
                 .edgeShadow(show: true, top: false)
                 .tag(Page.global)
             
-            FriendsList()
+            FriendsList(selectedUser: $userCard)
                 .edgeShadow(show: true)
                 .tag(Page.friends)
         }
@@ -130,9 +129,6 @@ struct ContentView: View {
                     .clipShape(Circle())
                 Text(user.name)
                 Spacer()
-            }
-            .onTapGesture {
-                user.name = "a"
             }
             .font(.large)
             .padding(.vertical, 12)

@@ -33,6 +33,8 @@ class Model: ObservableObject {
             try await Swizzle.shared.get("rank")
         }
     }
+    
+    var friendsRank: Int?
         
     init() {
         contactState = authStatus
@@ -100,7 +102,9 @@ class Model: ObservableObject {
         }
         let phones = cnContacts.flatMap { $0.phoneNumbers.compactMap { $0.value.stringValue.unformatted } }
         let users: [User] = try await Swizzle.shared.post("contactRanks", data: phones)
-        
+        let rank: Int = try await Swizzle.shared.post("myRankWithinContacts", data: phones)
+
         self.contacts = users
+        self.friendsRank = rank
     }
 }
