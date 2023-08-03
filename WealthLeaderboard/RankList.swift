@@ -13,7 +13,7 @@ struct RankList: View {
     @Binding var selectedUser: User?
     
     var users: [User] {
-        model.allUsers.sorted(by: { $0.balance > $1.balance })
+        model.allUsers
     }
     
     var body: some View {
