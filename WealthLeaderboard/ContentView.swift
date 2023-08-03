@@ -97,6 +97,7 @@ struct ContentView: View {
         .tabViewStyle(.page(indexDisplayMode: .never))
         .refreshable {
             do {
+                try await model.fetchUsers()
                 globalRank = try await model.rank
             } catch {
                 print(error.localizedDescription)

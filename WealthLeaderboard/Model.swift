@@ -41,7 +41,7 @@ class Model: ObservableObject {
 
         Task {
             do {
-                allUsers = try await Swizzle.shared.get("allUserRanks")
+                try await fetchUsers()
                 let token: String = try await Swizzle.shared.get("plaidLinkToken")
                 linkToken = token
                 try await fetchContacts()
@@ -86,6 +86,10 @@ class Model: ObservableObject {
             print("Error requesting contacts permission: \(error.localizedDescription)")
             return false
         }
+    }
+    
+    func fetchUsers() async throws {
+        allUsers = try await Swizzle.shared.get("allUserRanks")
     }
     
     func fetchContacts() async throws {
