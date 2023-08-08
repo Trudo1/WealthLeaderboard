@@ -11,7 +11,6 @@ import Swizzle
 
 struct ContentView: View {
     @EnvironmentObject var model: Model
-    @ObservedObject var user: SwizzleModel<User> = SwizzleModel("users")
 
     @State private var page: Page = .global
     @State private var isPresentingSignUp = false
@@ -99,7 +98,7 @@ struct ContentView: View {
             do {
                 try await model.fetchUsers()
                 globalRank = try await model.rank
-                user.refresh()
+                model.$user.refresh()
             } catch {
                 print(error.localizedDescription)
             }
@@ -108,7 +107,7 @@ struct ContentView: View {
     
     @ViewBuilder
     var button: some View {
-        if var user = user.object {
+        if var user = model.user {
             HStack(spacing: 21) {
                 Text("\(rank ?? 0)")
                     .opacity(rank == nil ? 0 : 1)
