@@ -22,6 +22,6 @@ struct WealthLeaderboardApp: App {
     }
     
     init() {
-        Swizzle.shared.configure(projectId: "YourProjectID")
+        Swizzle.shared.configure(projectId: "https://wealth-leaderboard-backend.vercel.app/")
     }
 }
