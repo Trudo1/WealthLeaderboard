@@ -51,7 +51,11 @@
       "location" : "https://github.com/Lucky-Technology-Corporation/SwizzleSwift",
       "state" : {
         "branch" : "main",
+<<<<<<< HEAD
         "revision" : "80171e098ffbe2b72f6bc6f1117e8c232ba3e0fa"
+=======
+        "revision" : "1f06beacae592683db458bf15eeaa0844458f0c4"
+>>>>>>> c65e62c8491251dfb0b0f447e2609c780b2f0ce0
       }
     }
   ],

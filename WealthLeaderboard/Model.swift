@@ -22,8 +22,8 @@ class Model: ObservableObject {
     
     var linkToken: String?
     
-    @SwizzleStorage("users") var user: User?
-    
+    @SwizzleData("users") var user: User?
+
     enum ContactState {
         case unrequested, enabled, unauthorized
     }
@@ -37,6 +37,8 @@ class Model: ObservableObject {
     var friendsRank: Int?
         
     init() {
+        Swizzle.bindToUI(self)
+        
         contactState = authStatus
 
         Task {
