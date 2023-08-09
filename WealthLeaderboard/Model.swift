@@ -75,6 +75,7 @@ class Model: ObservableObject {
         let user = User(name: name, photoURL: url.absoluteString, balance: balance ?? 0, phone: phoneNumber.unformatted)
         
         self.user = user
+        objectWillChange.send()
     }
     
     func requestPermission() async -> Bool {

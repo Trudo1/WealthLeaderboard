@@ -54,7 +54,7 @@ struct RankList: View {
                     .frame(minWidth: 22)
                 Color.clear
                     .frame(width: 48, height: 48)
-                    .overlay(alignment: .top) {
+                    .overlay {
                         if let url = URL(string: user.photoURL) {
                             KFImage(url)
                                 .resizable()
@@ -84,7 +84,7 @@ struct RankList: View {
                 if let url = URL(string: user.photoURL) {
                     Color.clear
                         .frame(width: frame, height: frame)
-                        .overlay(alignment: .top) {
+                        .overlay {
                             KFImage(url)
                                 .resizable()
                                 .scaledToFill()

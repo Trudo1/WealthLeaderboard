@@ -121,7 +121,7 @@ struct ContentView: View {
 
                 Color.clear
                     .frame(width: 48, height: 48)
-                    .overlay(alignment: .top) {
+                    .overlay {
                         if let url = URL(string: user.photoURL) {
                             KFImage(url)
                                 .resizable()
