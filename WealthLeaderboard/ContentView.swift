@@ -143,7 +143,7 @@ struct ContentView: View {
                 Button("Delete", role: .destructive) {
                     Task {
                         do {
-                            try await Swizzle.shared.deleteAccount()
+                            try await Swizzle.shared.deleteAccount(shouldReauthenticateAnonymously: true)
                             model.user = nil
                         } catch {
                             print(error.localizedDescription)
