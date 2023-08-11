@@ -108,7 +108,7 @@ class Model: ObservableObject {
             cnContacts.append(contentsOf: results)
         }
         let phones = cnContacts.flatMap { $0.phoneNumbers.compactMap { $0.value.stringValue.unformatted } }
-        let users: [User] = try await Swizzle.shared.postAndDecodeResponse("contactRanks", data: phones)
+        let users: [User] = try await Swizzle.shared.post(decodingResponseFrom: "contactRanks", data: phones)
         let rank: Int = try await Swizzle.shared.post("myRankWithinContacts", data: phones)
 
         self.contacts = users
