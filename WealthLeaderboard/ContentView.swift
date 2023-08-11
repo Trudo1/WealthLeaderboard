@@ -141,10 +141,10 @@ struct ContentView: View {
                     print("Error getting user rank")
                 }
             }
-            .opacity(page == .friends && model.contacts.isEmpty ? 0 : 1)
+            .opacity(page == .friends && model.contactState != .enabled ? 0 : 1)
             .overlay {
                 if page == .friends {
-                    if !(model.contactState == .enabled) {
+                    if model.contactState != .enabled {
                         Button("Enable Contacts") {
                             Task {
                                 await model.requestPermission()

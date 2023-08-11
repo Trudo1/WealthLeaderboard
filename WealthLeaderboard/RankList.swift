@@ -21,11 +21,14 @@ struct RankList: View {
             LazyVStack(spacing: 0) {
                 first3
                 
-                ForEach(Array(users.dropFirst(3).enumerated()), id: \.element) { offset, user in
+                ForEach(Array(users.dropFirst(3).enumerated()), id: \.element.id) { offset, user in
                     rowPhoto(of: user, index: offset)
                 }
             }
             .padding(.top, 20)
+            .onChange(of: users) { value in
+                print(users.map { $0.id })
+            }
         }
     }
     

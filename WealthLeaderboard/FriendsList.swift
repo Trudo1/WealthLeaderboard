@@ -51,12 +51,15 @@ struct FriendsList: View {
         HStack(alignment: .bottom) {
             if let second = users.second {
                 topPhoto(of: second, index: 1)
+                    .id(second.id)
             }
             if let first = users.first {
                 topPhoto(of: first, index: 0)
+                    .id(first.id)
             }
             if let third = users.third {
                 topPhoto(of: third, index: 2)
+                    .id(third.id)
             }
         }
         .padding(.horizontal, 21)
