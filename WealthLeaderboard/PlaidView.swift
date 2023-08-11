@@ -38,7 +38,7 @@ struct PlaidView: View {
         var linkConfiguration = LinkTokenConfiguration(token: token) { success in
             Task{
                 print("Exchanging Plaid Token")
-                try await Swizzle.shared.post("exchangePlaidToken", data: success)
+                try await Swizzle.shared.post(ignoringResponseFrom: "exchangePlaidToken", data: success)
             }
             dismiss()
         }

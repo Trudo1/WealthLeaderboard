@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "CEC1EAB1-102A-439B-B45F-F1E806FDAB60"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B9AE40CD-4C26-4300-8144-86BA617C0DE2"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../Library/Developer/Xcode/DerivedData/WealthLeaderboard-csjnzdreutmmijhkpalsecuiumfd/SourcePackages/checkouts/SwizzleSwift/Sources/Swizzle/SwizzleData.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "98"
+            endingLineNumber = "98"
+            landmarkName = "loadValue(forKey:defaultValue:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "B9AE40CD-4C26-4300-8144-86BA617C0DE2 - 4fcce3752e66318b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for closure #1 @Sendable () async -&gt; () in Swizzle.Swizzle.loadValue&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable, &#x3c4;_0_0: Swift.Encodable&gt;(forKey: Swift.String, defaultValue: Swift.Optional&lt;&#x3c4;_0_0&gt;, completion: (Swift.Optional&lt;&#x3c4;_0_0&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "WealthLeaderboard"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/adam/Library/Developer/Xcode/DerivedData/WealthLeaderboard-csjnzdreutmmijhkpalsecuiumfd/SourcePackages/checkouts/SwizzleSwift/Sources/Swizzle/SwizzleData.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "98"
+                  endingLineNumber = "98"
+                  offsetFromSymbolStart = "560">
+               </Location>
+               <Location
+                  uuid = "B9AE40CD-4C26-4300-8144-86BA617C0DE2 - de89d4068ec9a01f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor @Sendable () -&gt; () in closure #1 @Sendable () async -&gt; () in Swizzle.Swizzle.loadValue&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable, &#x3c4;_0_0: Swift.Encodable&gt;(forKey: Swift.String, defaultValue: Swift.Optional&lt;&#x3c4;_0_0&gt;, completion: (Swift.Optional&lt;&#x3c4;_0_0&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "WealthLeaderboard"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/adam/Library/Developer/Xcode/DerivedData/WealthLeaderboard-csjnzdreutmmijhkpalsecuiumfd/SourcePackages/checkouts/SwizzleSwift/Sources/Swizzle/SwizzleData.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "98"
+                  endingLineNumber = "98"
+                  offsetFromSymbolStart = "136">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7A82239A-578C-4BFD-BCE8-31BEBE4B6CF5"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WealthLeaderboard/Model.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "95"
+            endingLineNumber = "95"
+            landmarkName = "fetchUsers()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
