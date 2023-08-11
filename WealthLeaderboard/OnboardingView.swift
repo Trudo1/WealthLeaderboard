@@ -134,6 +134,7 @@ struct OnboardingView: View {
                 }
             
             Button("Continue") {
+                model.firstName = model.firstName.trimmingCharacters(in: .whitespacesAndNewlines)
                 page = .last
             }
             .buttonStyle(WLButtonStyle())
@@ -158,6 +159,7 @@ struct OnboardingView: View {
                 }
             
             Button("Continue") {
+                model.lastName = model.lastName.trimmingCharacters(in: .whitespacesAndNewlines)
                 Task {
                     page = .phone
                     editing = false

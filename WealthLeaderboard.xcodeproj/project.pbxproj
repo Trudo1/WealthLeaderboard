@@ -445,7 +445,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WealthLeaderboard/Info.plist;
-				INFOPLIST_KEY_NSContactsUsageDescription = "Enable contacts to see which of your friends are on Wealth Leaderboard and where you rank amongst them.";
+				INFOPLIST_KEY_NSContactsUsageDescription = "We access your contacts to find phone numbers and cross-reference them with our database to help you connect with friends who are also using the app.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -480,7 +480,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WealthLeaderboard/Info.plist;
-				INFOPLIST_KEY_NSContactsUsageDescription = "Enable contacts to see which of your friends are on Wealth Leaderboard and where you rank amongst them.";
+				INFOPLIST_KEY_NSContactsUsageDescription = "We access your contacts to find phone numbers and cross-reference them with our database to help you connect with friends who are also using the app.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
