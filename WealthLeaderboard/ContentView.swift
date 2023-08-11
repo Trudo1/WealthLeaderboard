@@ -17,6 +17,9 @@ struct ContentView: View {
     
     @State private var userCard: User?
     @State private var globalRank: Int?
+    
+    @State private var showDelete = false
+    
     var rank: Int? {
         switch page {
         case .friends:
@@ -108,28 +111,49 @@ struct ContentView: View {
     @ViewBuilder
     var button: some View {
         if var user = model.user {
-            HStack(spacing: 21) {
-                Text("\(rank ?? 0)")
-                    .opacity(rank == nil ? 0 : 1)
-                    .overlay {
-                        if rank == nil {
-                            LoadingView()
+            Button {
+                showDelete = true
+            } label: {
+                HStack(spacing: 21) {
+                    Text("\(rank ?? 0)")
+                        .opacity(rank == nil ? 0 : 1)
+                        .overlay {
+                            if rank == nil {
+                                LoadingView()
+                            }
+                        }
+                        .frame(minWidth: 22)
+                    
+                    Color.clear
+                        .frame(width: 48, height: 48)
+                        .overlay {
+                            if let url = URL(string: user.photoURL) {
+                                KFImage(url)
+                                    .resizable()
+                                    .scaledToFill()
+                            }
+                        }
+                        .clipShape(Circle())
+                    Text(user.name)
+                    Spacer()
+                }
+            }
+            .alert("Delete Account", isPresented: $showDelete) {
+                Button("Delete", role: .destructive) {
+                    Task {
+                        do {
+                            try await Swizzle.shared.deleteAccount()
+                            model.user = nil
+                        } catch {
+                            print(error.localizedDescription)
                         }
                     }
-                    .frame(minWidth: 22)
-
-                Color.clear
-                    .frame(width: 48, height: 48)
-                    .overlay {
-                        if let url = URL(string: user.photoURL) {
-                            KFImage(url)
-                                .resizable()
-                                .scaledToFill()
-                        }
-                    }
-                    .clipShape(Circle())
-                Text(user.name)
-                Spacer()
+                }
+                Button("Cancel", role: .cancel) {
+                    
+                }
+            } message: {
+                Text("Are you sure you would like to delete your account? This can't be undone.")
             }
             .font(.large)
             .padding(.vertical, 12)
