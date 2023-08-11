@@ -138,6 +138,7 @@ struct ContentView: View {
                     Spacer()
                 }
             }
+            .foregroundColor(.black)
             .alert("Delete Account", isPresented: $showDelete) {
                 Button("Delete", role: .destructive) {
                     Task {
