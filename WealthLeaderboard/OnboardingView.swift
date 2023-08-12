@@ -226,6 +226,7 @@ struct OnboardingView: View {
                     do {
                         try await model.createUser()
                         showing = false
+                        page = .link
                     } catch {
                         print(error.localizedDescription)
                     }
