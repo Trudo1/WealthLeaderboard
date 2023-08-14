@@ -26,7 +26,6 @@ enum IAPHandlerAlertType {
 
 
 class IAPHandler: NSObject {
-    
     static let shared = IAPHandler()
     private override init() { }
     
@@ -44,7 +43,7 @@ class IAPHandler: NSObject {
         self.productIds = ids
     }
 
-    var canMakePurchases: Bool { SKPaymentQueue.canMakePayments()  }
+    var canMakePurchases: Bool { SKPaymentQueue.canMakePayments() }
     
     func purchase(product: SKProduct, completion: @escaping ((IAPHandlerAlertType, SKProduct?, SKPaymentTransaction?)->Void)) {
         
@@ -67,63 +66,39 @@ class IAPHandler: NSObject {
         self.fetchProductCompletion = completion
         
         if self.productIds.isEmpty {
-            log(IAPHandlerAlertType.setProductIds.message)
-            fatalError(IAPHandlerAlertType.setProductIds.message)
+            print(IAPHandlerAlertType.setProductIds.message)
         } else {
             productsRequest = SKProductsRequest(productIdentifiers: Set(self.productIds))
             productsRequest.delegate = self
             productsRequest.start()
         }
     }
-    
-    //MARK:- Private
-    fileprivate func log <T> (_ object: T) {
-        if isLogEnabled {
-            NSLog("\(object)")
-        }
-    }
 }
 
-extension IAPHandler: SKProductsRequestDelegate, SKPaymentTransactionObserver{
-    
-    // REQUEST IAP PRODUCTS
-    func productsRequest (_ request:SKProductsRequest, didReceive response:SKProductsResponse) {
-        
-        if (response.products.count > 0) {
-            if let completion = self.fetchProductCompletion {
-                completion(response.products)
-            }
+extension IAPHandler: SKProductsRequestDelegate, SKPaymentTransactionObserver {
+    func productsRequest(_ request: SKProductsRequest, didReceive response: SKProductsResponse) {
+        if let completion = self.fetchProductCompletion {
+            completion(response.products)
         }
     }
         
-    // IAP PAYMENT QUEUE
     func paymentQueue(_ queue: SKPaymentQueue, updatedTransactions transactions: [SKPaymentTransaction]) {
-        for transaction: AnyObject in transactions {
-            if let paymentTrans = transaction as? SKPaymentTransaction {
-                switch paymentTrans.transactionState {
-                case .purchased:
-                    log("Product purchase done")
-                    SKPaymentQueue.default().finishTransaction(transaction as! SKPaymentTransaction)
-                    if let completion = self.purchaseProductCompletion {
-                        completion(IAPHandlerAlertType.purchased, self.productToPurchase, paymentTrans)
-                    }
-                    break
-                    
-                case .failed:
-                    log("Product purchase failed")
-                    SKPaymentQueue.default().finishTransaction(transaction as! SKPaymentTransaction)
-                    if let completion = self.purchaseProductCompletion {
-                        completion(IAPHandlerAlertType.failed, self.productToPurchase, paymentTrans)
-                    }
-                    break
-                case .restored:
-                    log("Product restored")
-                    SKPaymentQueue.default().finishTransaction(transaction as! SKPaymentTransaction)
-                    break
-                    
-                default:
-                    break
+        for transaction in transactions {
+            switch transaction.transactionState {
+            case .purchased:
+                SKPaymentQueue.default().finishTransaction(transaction)
+                if let completion = self.purchaseProductCompletion {
+                    completion(IAPHandlerAlertType.purchased, self.productToPurchase, transaction)
                 }
+            case .failed:
+                SKPaymentQueue.default().finishTransaction(transaction)
+                if let completion = self.purchaseProductCompletion {
+                    completion(IAPHandlerAlertType.failed, self.productToPurchase, transaction)
+                }
+            case .restored:
+                SKPaymentQueue.default().finishTransaction(transaction)
+            default:
+                break
             }
         }
     }

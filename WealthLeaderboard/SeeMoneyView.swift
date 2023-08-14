@@ -11,6 +11,8 @@ import Kingfisher
 struct SeeMoneyView: View {
     @State var purchased = false
     @State var loading = false
+    @State var presentAlert = false
+    @State var message: String?
     
     var user: User
     
@@ -69,20 +71,21 @@ struct SeeMoneyView: View {
                 Button("See how much money they have") {
                     loading = true
                     IAPHandler.shared.fetchAvailableProducts { products in
-                        print("fetching")
                         guard let product = products.first else {
-                            print("can't find product")
                             loading = false
+                            message = "Purchase is not available at this time"
+                            presentAlert = true
                             return
                         }
-                        print("product: \(product)")
                         IAPHandler.shared.purchase(product: product) { type, product, transaction in
-                            print("purchasing")
                             switch type {
                             case .purchased:
                                 purchased = true
+                            case .failed:
+                                message = type.message
+                                presentAlert = true
                             default:
-                                return
+                                break
                             }
                             loading = false
                         }
@@ -90,6 +93,11 @@ struct SeeMoneyView: View {
                 }
                 .buttonStyle(WLButtonStyle(loading: $loading))
                 .disabled(loading)
+                .alert("Error", isPresented: $presentAlert, presenting: message) { _ in
+                    Button("OK", role: .cancel) { }
+                } message: { message in
+                    Text(message)
+                }
             }
         }
         .onDisappear {
